@@ -1,16 +1,17 @@
 from django.http import Http404
 from django.shortcuts import render, HttpResponse
 #from requests import Response
-from .models import Project, FilesAdmin
+#from .models import Project, FilesAdmin
+from .models import Project
 import os
 from django.conf import settings
 
 def portfolio(request):
     projects = Project.objects.all()
     #OUR_CONTEXT={'file':FilesAdmin.objects.all()}
-    file = FilesAdmin.objects.all()
-    return render(request, "core/portfolio.html", {'projects': projects, 'file':file})
-
+    #file = FilesAdmin.objects.all()
+    #return render(request, "core/portfolio.html", {'projects': projects, 'file':file})
+    return render(request, "core/portfolio.html", {'projects': projects})
 
 '''def home(request):
     # get all objects

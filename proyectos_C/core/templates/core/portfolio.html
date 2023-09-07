@@ -75,15 +75,16 @@
             <div class="col-lg-7 col-md-8">
               <h2 class="section-heading title">{{project.title}}</h2>   
               <p>{{project.description}}</p>
+              <a href="{{project.adminupload.url}}" download="{{project.adminupload.url}}">Download</a>
               <!--<p><a href="http://google.com">Más información</a></p>-->
             </div>
           </div>
       {% endfor %}
     </div>
-    {% for post in file %}
+    <!--{% for post in file %}
 <h2>{{post.title}}</h2>
 <a href="{{post.adminupload.url}}" download="{{post.adminupload.url}}">Download</a>
- {% endfor %}
+ {% endfor %}-->
     <!-- Pié de página -->
     <footer>
         <hr>

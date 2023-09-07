@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, FilesAdmin
+from .models import Project
 
 class ProjectAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
@@ -7,4 +7,4 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Project, ProjectAdmin)
-admin.site.register(FilesAdmin)
+#admin.site.register(FilesAdmin)
