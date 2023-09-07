@@ -7,13 +7,14 @@ from django.conf import settings
 
 def portfolio(request):
     projects = Project.objects.all()
-    return render(request, "core/portfolio.html", {'projects': projects})
+    OUR_CONTEXT={'file':FilesAdmin.objects.all()}
+    return render(request, "core/portfolio.html", {'projects': projects, 'OUR_CONTEXT': OUR_CONTEXT})
 
 
-def home(request):
+'''def home(request):
     # get all objects
     OUR_CONTEXT={'file':FilesAdmin.objects.all()}
-    return render(request,'core/portfolio.html',OUR_CONTEXT)
+    return render(request,'core/portfolio.html',OUR_CONTEXT)'''
 
 
 
