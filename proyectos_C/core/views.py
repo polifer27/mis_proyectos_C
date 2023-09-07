@@ -8,8 +8,8 @@ from django.conf import settings
 def portfolio(request):
     projects = Project.objects.all()
     #OUR_CONTEXT={'file':FilesAdmin.objects.all()}
-    files = FilesAdmin.objects.all()
-    return render(request, "core/portfolio.html", {'projects': projects, 'files':files})
+    file = FilesAdmin.objects.all()
+    return render(request, "core/portfolio.html", {'projects': projects, 'file':file})
 
 
 '''def home(request):
