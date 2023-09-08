@@ -65,6 +65,13 @@
     
     <!-- Contenido Principal -->
     <div class="container">
+   
+      
+   
+         <h2 class="tamaño">Pulsar en Download para descargar el ejecutable en sistemas linux</h2>
+     
+      
+    
       {% for project in projects %}
       <!-- Proyecto -->
      
@@ -75,7 +82,7 @@
             <div class="col-lg-7 col-md-8">
               <h2 class="section-heading title">{{project.title}}</h2>   
               <p>{{project.description}}</p>
-              <a href="{{project.adminupload.url}}" download="{{project.adminupload.url}}">Download</a>
+              <a class="nav-link" href="{{project.adminupload.url}}" download="{{project.adminupload.url}}"><b>| Download |</b></a>
               <!--<p><a href="http://google.com">Más información</a></p>-->
             </div>
           </div>
